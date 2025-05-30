@@ -1,13 +1,125 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Dexicon</title>
+    <style>
+        :root {
+            font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+            line-height: 1.5;
+            font-weight: 400;
+            color-scheme: light dark;
+            color: rgba(255, 255, 255, 0.87);
+            background-color: #242424;
+            /* Fallback background */
+            font-synthesis: none;
+            text-rendering: optimizeLegibility;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        body {
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            /* Center content vertically */
+            justify-content: center;
+            /* Center content horizontally */
+            align-items: center;
+            /* Center content horizontally */
+            min-height: 100vh;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            padding: 1rem;
+            /* Add some padding for smaller screens */
+            box-sizing: border-box;
+            /* Include padding in height/width calculation */
+        }
+
+        .container {
+            text-align: center;
+            padding: 2rem;
+            background-color: rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            max-width: 600px;
+            /* Limit container width */
+            width: 90%;
+            /* Make it responsive */
+        }
+
+        h1 {
+            font-size: 2.5em;
+            /* Adjusted for responsiveness */
+            line-height: 1.1;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            font-size: 1.1em;
+            /* Adjusted for responsiveness */
+            margin-bottom: 2rem;
+        }
+
+        .cta-button {
+            border-radius: 8px;
+            border: 1px solid transparent;
+            padding: 0.8em 1.5em;
+            font-size: 1em;
+            font-weight: 500;
+            font-family: inherit;
+            background-color: #764ba2;
+            color: #ffffff;
+            cursor: pointer;
+            transition: background-color 0.25s, border-color 0.25s;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .cta-button:hover {
+            background-color: #667eea;
+            border-color: #5a6ac4;
+        }
+
+        .cta-button:focus,
+        .cta-button:focus-visible {
+            outline: 4px auto -webkit-focus-ring-color;
+            /* Default focus outline */
+        }
+
+        /* Responsive adjustments for smaller screens */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2em;
+            }
+
+            p {
+                font-size: 1em;
+            }
+
+            .container {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Welcome to Dexicon</h1>
+        <p>Your ultimate companion for a richer browsing experience.</p>
+        <button id="redirectButton" class="cta-button">
+            Add to Chrome
+        </button>
+    </div>
+
+    <script>
+        document.getElementById( 'redirectButton' ).onclick = function ()
+        {
+            window.location.href = 'https://chrome.google.com/webstore'; // Replace with your actual extension URL if available
+        };
+    </script>
+</body>
+
 </html>
