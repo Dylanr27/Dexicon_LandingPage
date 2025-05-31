@@ -102,6 +102,22 @@
                 padding: 1.5rem;
             }
         }
+
+        .privacy-link-container {
+            margin-top: 20px;
+            /* Add some space above the link */
+            font-size: 0.9em;
+        }
+
+        .privacy-link {
+            color: #ffffff;
+            /* White color to match other text */
+            text-decoration: underline;
+        }
+
+        .privacy-link:hover {
+            text-decoration: none;
+        }
     </style>
 </head>
 
@@ -112,6 +128,10 @@
         <button id="redirectButton" class="cta-button">
             Add to Chrome
         </button>
+        <div class="privacy-link-container">
+            <a href="privacy_policy.html" class="privacy-link">Privacy
+                Policy</a>
+        </div>
     </div>
 
     <script>
