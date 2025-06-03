@@ -81,7 +81,7 @@
 <body>
     <div class="container">
         <h1>Privacy Policy for Dexicon Chrome Extension</h1>
-        <p class="last-updated"><strong>Last Updated:</strong> 05/31/2025</p>
+        <p class="last-updated"><strong>Last Updated:</strong> 06/02/2025</p>
 
         <p>Welcome to Dexicon! This Privacy Policy explains how Dexicon ("we,"
             "us," or "our") collects, uses, shares, and protects information in
@@ -150,6 +150,12 @@
                 settings (font, theme, shortcuts), text selections made for
                 definition lookup, clicks within the Dexicon bubble or popup,
                 and mouse/scroll position used to place the explanation bubble.
+                This processing is primarily for the immediate operation of the
+                extension's features; for instance, click data or mouse
+                positions
+                are used in real-time and not stored. Data such as your
+                customized settings are stored locally as detailed in sections
+                1.g and 5.
             </li>
             <li><strong>Keyboard Shortcuts:</strong> If you use keyboard
                 shortcuts to activate Dexicon's features, we process those
@@ -260,7 +266,13 @@
             API via Cloudflare's AI Gateway. We only send the text content
             necessary to generate the explanation. Your email or API key is not
             directly sent to OpenAI by us; our worker authenticates you before
-            making its own authorized call to OpenAI. The use of data by OpenAI
+            making its own authorized call to OpenAI. Cloudflare's AI Gateway,
+            which facilitates these requests, provides functionalities such as
+            logging of request metadata (e.g., timestamps, error codes) for
+            monitoring and security, rate limiting to protect the service, and
+            potentially caching of AI responses to enhance performance and
+            reliability. The handling of any data by the AI Gateway is subject
+            to Cloudflare's policies. The use of data by OpenAI
             is governed by their policies.</p>
 
         <h3>d. Legal Compliance and Protection:</h3>
@@ -312,10 +324,16 @@
                 address, through the ExtensionPay platform. You can modify your
                 Dexicon settings (themes, fonts, shortcuts) directly within the
                 extension popup.</li>
-            <li><strong>Disabling the Extension:</strong> You can disable or
-                uninstall Dexicon at any time through your browser's extension
-                management page. Disabling it for a specific tab is a core
-                feature.</li>
+            <li><strong>Disabling the Extension:</strong> Dexicon is designed
+                with user control in mind and is <strong>disabled by default for
+                    each new tab.</strong> You must explicitly enable it for a
+                tab before it can process any selected text or send information
+                to our backend services (and, by extension, to OpenAI). You can
+                easily toggle the extension's active state for the current tab,
+                which is a core feature. Furthermore, you can disable or
+                uninstall Dexicon entirely at any time through your browser's
+                extension management page.
+            </li>
             <li><strong>Deleting Your Data:</strong>
                 <ul>
                     <li>To delete your <code>extensionpay_api_key</code> and
